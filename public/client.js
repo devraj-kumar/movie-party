@@ -32,8 +32,9 @@ $(document).ready(function() {
          */
         var host = window.location.host //.split(':')[0];
         var socket = io.connect('http://' + host, {
-            reconnect: false,
-            'try multiple transports': false
+            reconnect: true,
+            'try multiple transports': false,
+            transports: ['websocket'], upgrade: false
         });
         var intervalID;
         var reconnectCount = 0;
