@@ -11,7 +11,7 @@ build/test_coverage.txt
 *._.DS_Store
 *.DS_Store
 package-lock.json
-yarn-lock.json
+yarn.lock
 .idea/*
 
 #Ignore temp and swp files
