@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nodemon .",
     "prod_start": "NODE_ENV=production pm2 start pm2.json && pm2 log",
+    "start_in_docker": "NODE_ENV=production pm2 start pm2.json && pm2 log",
     "prod_stop": "pm2 stop movie-party"
   },
   "dependencies": {
