@@ -64,11 +64,11 @@ pipeline {
           "text":"Deployed To $GIT_BRANCH",
           "attachments": [
                   {
-                      "text": "<https://github.com/ayushlodhi11/movie-party/branches/compare/$GIT_COMMIT..$GIT_PREVIOUS_COMMIT#diff|Git Revision> \n <$BUILD_URL|Jenkins Pipeline> \n User: '\$GIT_EMAIL'",
+                      "text": "<https://github.com/ayushlodhi11/movie-party|movie-party> \n <$BUILD_URL|Jenkins Pipeline> \n User: '\$GIT_EMAIL'",
                       "color": "#7CD197",
                   }
               ]
-        }' https://hooks.slack.com/services/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
+        }' https://hooks.slack.com/services/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
         """
       }
       failure {
@@ -82,11 +82,11 @@ pipeline {
           "text":"$GIT_BRANCH Build Failed",
           "attachments": [
                   {
-                      "text": "<https://github.com/ayushlodhi11/movie-party/branches/compare/$GIT_COMMIT..$GIT_PREVIOUS_COMMIT#diff|Git Revision> \n <$BUILD_URL|Jenkins Pipeline> \n User: '\$GIT_EMAIL'",
+                      "text": "<https://github.com/ayushlodhi11/movie-party|movie-party> \n <$BUILD_URL|Jenkins Pipeline> \n User: '\$GIT_EMAIL'",
                       "color": "#F35A00",
                   }
               ]
-        }' https://hooks.slack.com/services/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
+        }' https://hooks.slack.com/services/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
         """
       }
   }
