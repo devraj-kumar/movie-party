@@ -24,8 +24,6 @@ RUN . "$NVM_DIR/nvm.sh" && yarn install
 
 COPY . .
 
-RUN . "$NVM_DIR/nvm.sh" && yarn build
-
 ENTRYPOINT ["build/docker-entrypoint.sh"]
 
 # start app
