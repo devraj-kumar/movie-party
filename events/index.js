@@ -1,12 +1,13 @@
 'use strict';
-var redis = require('redis');
-var sub = redis.createClient({prefix: "stream"});
-var pub = redis.createClient({prefix: "stream"});
+var redis = require('../lib/redis-host.js');
+var sub = redis.createClient({prefix: "pubsubstream"});
+var pub = redis.createClient({prefix: "pubsubstream"});
 var movieStorage = redis.createClient({prefix: "movie-storage"});
 sub.subscribe("redisstream");
 
 module.exports = function(io) {
     io.on('connection', function(socket) {
+        console.log(' %s sockets connected', io.engine.clientsCount);
         /*
          When the user sends a chat message, publish it to everyone (including myself) using
          Redis' 'pub' client we created earlier.

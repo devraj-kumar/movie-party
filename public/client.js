@@ -31,9 +31,12 @@ $(document).ready(function() {
          Connect to socket.io on the server.
          */
         var host = window.location.host //.split(':')[0];
-        var socket = io.connect('http://' + host, {
-            reconnect: false,
-            'try multiple transports': false
+        var is_https = location.protocol === 'https:'
+        var socket = io.connect((is_https ? 'https://' : 'http://') + host, {
+            secure: is_https,
+            reconnect: true,
+            'try multiple transports': false,
+            transports: ['websocket'], upgrade: false
         });
         var intervalID;
         var reconnectCount = 0;

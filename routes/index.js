@@ -66,7 +66,7 @@ function renderStreamingPage(req, res) {
 }
 
 function getServer(){
-  return process.env.VCAP_APP_HOST ? process.env.VCAP_APP_HOST + ":" + process.env.VCAP_APP_PORT : 'localhost:3000';
+  return process.env.VCAP_APP_HOST ? process.env.VCAP_APP_HOST : 'localhost:3000';
 }
 
 function generate_session_id() {
