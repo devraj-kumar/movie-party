@@ -1,0 +1,6 @@
+[
+    {
+        "name": "movie-party",
+        "script": "lib/index.js"
+    }
+]

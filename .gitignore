@@ -1,0 +1,20 @@
+# dependencies
+.next/
+.vscode/
+.git/
+node_modules/
+*.log
+coverage/
+build/test_coverage.txt
+# misc
+.env
+*._.DS_Store
+*.DS_Store
+package-lock.json
+.idea/*
+
+#Ignore temp and swp files
+*~
+*.swp
+*.swo
+tags
