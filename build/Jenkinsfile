@@ -35,7 +35,7 @@ pipeline {
       steps{
          script {
           sh """
-            kubectl -n ${env.nodeEnv} set image deployment.v1.apps/${app} ${app}=${registry}:${env.GIT_COMMIT}
+            kubectl -n staging set image deployment.v1.apps/${app} ${app}=${registry}:${env.GIT_COMMIT}
           """
         }
       }
@@ -68,7 +68,7 @@ pipeline {
                       "color": "#7CD197",
                   }
               ]
-        }' https://hooks.slack.com/services/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
+        }' https://hooks.slack.com/services/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
         """
       }
       failure {
@@ -86,7 +86,7 @@ pipeline {
                       "color": "#F35A00",
                   }
               ]
-        }' https://hooks.slack.com/services/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
+        }' https://hooks.slack.com/services/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
         """
       }
   }
